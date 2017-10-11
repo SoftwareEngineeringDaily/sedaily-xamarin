@@ -1,0 +1,4 @@
+SEDailyXamarin.MainActivity, SEDailyXamarin;md519448bcf36981c333121a335fd3ad33c.MainActivity
+SEDailyXamarin.MainActivity, SEDailyXamarin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md519448bcf36981c333121a335fd3ad33c.MainActivity
+SEDailyXamarin.MainActivity;md519448bcf36981c333121a335fd3ad33c.MainActivity
+sedailyxamarin.MainActivity;md519448bcf36981c333121a335fd3ad33c.MainActivity
