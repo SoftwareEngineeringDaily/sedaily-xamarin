@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:SeDailyXamarin.ViewModels;"
+             x:Class="SeDailyXamarin.Views.PlayBack">
+    <ContentPage.BindingContext>
+        <vm:PlayBackViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Slider Value="{Binding TimeElapsed, Mode=TwoWay}"
+                        x:Name="playBackSlider"
+                        VerticalOptions="StartAndExpand"
+                        Minimum="0"
+                        Maximum="100"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="timeElapsed"
+                        Text="{Binding TimeElapsed}"
+                        HorizontalOptions="StartAndExpand"/>
+                <Label x:Name="timeRemaining"
+                        Text="{Binding TimeRemaining}"
+                        XAlign="End"
+                        HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Title"
+                       HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="PREV" />
+                <Button Text="NEXT" />
+                <Button Text="HIDE" />
+                <Button Text="PLAY" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Time"
+                    HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+<!--<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:SeDailyXamarin.ViewModels;"
+             x:Class="SeDailyXamarin.Views.PlayBack">
+    <ContentPage.BindingContext>
+        <vm:PlayBackViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Slider Value="{Binding TimeElapsed, Mode=TwoWay}"
+                    x:Name="playBackSlider"
+                    VerticalOptions="CenterAndExpand"
+                    BackgroundColor="Pink" />
+            <Label x:Name="timeElapsed"
+                    Text="{Binding TimeElapsed, StringFormat='{0:D2}h:{1:D2}m:{2:D2}s:{3:D3}ms'}"
+                    XAlign="Start"
+                    HorizontalOptions="End"
+                    BackgroundColor="Black" />
+            <Label x:Name="timeRemaining"
+                       BindingContext="{x:Reference Name=playBackSlider}"
+                       Text="{Binding TimeRemaining, StringFormat='{0:D2}h:{1:D2}m:{2:D2}s:{3:D3}ms'}"
+                       XAlign="End"
+                       HorizontalOptions="End"
+                       BackgroundColor="Black" />
+            --><!--<Button Text="Click Me!"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    Clicked="OnButtonClicked" />--><!--
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>-->

@@ -6,6 +6,9 @@ using Xamarin.Forms;
 
 namespace SeDailyXamarin.Views
 {
+    /// <summary>
+    /// https://developer.xamarin.com/guides/xamarin-forms/xaml/xaml-basics/getting_started_with_xaml/
+    /// </summary>
     public partial class NewItemPage : ContentPage
     {
         public Item Item { get; set; }
