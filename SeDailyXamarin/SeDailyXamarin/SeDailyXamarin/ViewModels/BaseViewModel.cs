@@ -19,17 +19,29 @@ namespace SeDailyXamarin.ViewModels
             get { return isBusy; }
             set { SetProperty(ref isBusy, value); }
         }
-        /// <summary>
-        /// Private backing field to hold the title
-        /// </summary>
+
         string title = string.Empty;
-        /// <summary>
-        /// Public property to set and get the title of the item
-        /// </summary>
+        public const string TitlePropertyName = "Title";
         public string Title
         {
             get { return title; }
             set { SetProperty(ref title, value); }
+        }
+
+        private bool canLoadMore = true;
+        public const string CanLoadMorePropertyName = "CanLoadMore";
+        public bool CanLoadMore
+        {
+            get { return canLoadMore; }
+            set { SetProperty(ref canLoadMore, value); }
+        }
+
+        private string icon = null;
+        public const string IconPropertyName = "Icon";
+        public string Icon
+        {
+            get { return icon; }
+            set { SetProperty(ref icon, value); }
         }
     }
 }

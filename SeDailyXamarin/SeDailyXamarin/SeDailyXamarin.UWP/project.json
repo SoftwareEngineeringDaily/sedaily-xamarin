@@ -1,10 +1,12 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "Plugin.MediaManager": "0.4.5",
+    "Plugin.MediaManager.Forms": "0.4.5",
     "Xamarin.Forms": "2.3.4.224"
   },
   "frameworks": {
-    "uap10.0": {}
+    "uap10.0.10586": {}
   },
   "runtimes": {
     "win10-arm": {},

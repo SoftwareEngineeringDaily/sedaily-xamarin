@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.SeDailyXamarin" android:versionCode="1" android:versionName="1.0">
-	<uses-sdk android:minSdkVersion="15" />
+  <uses-sdk android:minSdkVersion="15"/>
   <application android:label="@string/app_name"></application>
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
 </manifest>

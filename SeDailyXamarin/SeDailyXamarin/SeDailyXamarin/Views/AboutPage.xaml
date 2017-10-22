@@ -7,62 +7,29 @@
   <ContentPage.BindingContext>
     <vm:AboutViewModel />
   </ContentPage.BindingContext>
-  <Grid>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="Auto"/>
-      <RowDefinition Height="*"/>
-    </Grid.RowDefinitions>
-    <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-      <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-        <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-          <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64"/>
-        </ContentView>
-      </StackLayout>
-    </StackLayout>
-    <ScrollView Grid.Row="1">
-      <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
-        <Label FontSize="22">
-          <Label.FormattedText>
-            <FormattedString>
-              <FormattedString.Spans>
-                <Span Text="SeDailyXamarin" FontAttributes="Bold" FontSize="22"/>
-                <Span Text=" "/>
-                <Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}"/>
-              </FormattedString.Spans>
-            </FormattedString>
-          </Label.FormattedText>
-        </Label>
-        <Label>
-          <Label.FormattedText>
-            <FormattedString>
-              <FormattedString.Spans>
-                <Span Text="This app is written in C# and native APIs using the" />
-                <Span Text=" "/>
-                <Span Text="Xamarin Platform" FontAttributes="Bold" />
-                <Span Text="." />
-              </FormattedString.Spans>
-            </FormattedString>
-          </Label.FormattedText>
-        </Label>
-        <Label>
-          <Label.FormattedText>
-            <FormattedString>
-              <FormattedString.Spans>
-                <Span Text="It shares code with its" />
-                <Span Text=" "/>
-                <Span Text="iOS, Android, and Windows" FontAttributes="Bold" />
-                <Span Text=" "/>
-                <Span Text="versions." />
-              </FormattedString.Spans>
-            </FormattedString>
-          </Label.FormattedText>
-        </Label>
-        <Button Margin="0,10,0,0"
-                Text="Learn more" 
-                Command="{Binding OpenWebCommand}"
-                BackgroundColor="{StaticResource Primary}"
-                TextColor="White"/>
-      </StackLayout>
+    <ScrollView>
+        <StackLayout Orientation="Vertical" Spacing="10">
+            <Image Aspect="AspectFill" Source="sedailylogo.png"/>
+            <StackLayout Spacing="10" 
+                   Padding="10" 
+                   VerticalOptions="FillAndExpand">
+
+                <Label
+               Text="Data from my two years at Software Engineering Radio indicates that technical software podcast listeners are an under-served market. If you are a software engineer who doesn't listen to many podcasts about software, this should be self-evident.Technical knowledge about software will help you work more intelligently.The scope of software engineering is growing. If you use WordPress, Ableton or PhotoShop, you are a software engineer. If you use Facebook, you are a software engineer–you are helping build software. On a twenty year time horizon, there is no 'opting out' of knowing how software works. But this is OK because learning about software is possible (and fun) no matter your age, race, or creed.When I started listening to Software Engineering Radio in college, I understood 5% of every episode, but I found the personalities compelling and my understanding of software improved gradually every time I listened. Oftentimes I would listen to an episode during my work commute, and learn more from that episode than I would at work.At the gym or on your commute, you can listen to long-form interviews about software engineering.After every episode, you should feel like you are 1% better at understanding how software works.If you are a software engineer, and you are not listening to Software Engineering Daily, I want to know why.."
+               LineBreakMode="WordWrap"/>
+
+                <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="CenterAndExpand"
+                     Spacing="10">
+
+                    <Image x:Name="twitter" Source="twitter.png"/>
+                    <Image x:Name="facebook" Source="facebook.png"/>
+                    <Image x:Name="instagram" Source="instagram.png"/>
+                </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
+
     </ScrollView>
-  </Grid>
 </ContentPage>

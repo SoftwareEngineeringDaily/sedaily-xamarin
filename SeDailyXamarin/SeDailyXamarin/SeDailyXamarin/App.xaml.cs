@@ -11,9 +11,11 @@ namespace SeDailyXamarin
         public App()
         {
             InitializeComponent();
-
-            SetMainPage();
+            MainPage = new RootPage();
+            //SetMainPage();
         }
+
+        public static bool IsWindows10 { get; set; }
 
         public static void SetMainPage()
         {

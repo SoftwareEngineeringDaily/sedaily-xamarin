@@ -284,6 +284,32 @@
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Plugin.MediaManager/0.4.5": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.5": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "0.4.5",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        }
+      },
       "runtime.native.System.IO.Compression/4.1.0": {
         "type": "package",
         "dependencies": {
@@ -2391,6 +2417,32 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Plugin.MediaManager/0.4.5": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.5": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "0.4.5",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
         }
       },
       "runtime.any.System.Collections/4.0.11": {
@@ -4661,6 +4713,32 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Plugin.MediaManager/0.4.5": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.5": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "0.4.5",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.0.10": {
@@ -6970,6 +7048,32 @@
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Plugin.MediaManager/0.4.5": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.5": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "0.4.5",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        }
+      },
       "runtime.any.System.Collections/4.0.11": {
         "type": "package",
         "dependencies": {
@@ -9247,6 +9351,32 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Plugin.MediaManager/0.4.5": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.5": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "0.4.5",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.0.10": {
@@ -11562,6 +11692,32 @@
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Plugin.MediaManager/0.4.5": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.5": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "0.4.5",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        }
+      },
       "runtime.any.System.Collections/4.0.11": {
         "type": "package",
         "dependencies": {
@@ -13839,6 +13995,32 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Plugin.MediaManager/0.4.5": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.dll": {}
+        }
+      },
+      "Plugin.MediaManager.Forms/0.4.5": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.MediaManager": "0.4.5",
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll": {},
+          "lib/uap10.0/Plugin.MediaManager.Forms.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.0.10": {
@@ -16222,6 +16404,59 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
+      ]
+    },
+    "Plugin.MediaManager/0.4.5": {
+      "sha512": "cpTcuGY+HUDhz2spS4jlB8zmlVsULzbR+YYcxXanKnARUmXO7L66gC+MiJYhVfOEhg96EKYPGEGPuIPtzST3+A==",
+      "type": "package",
+      "path": "plugin.mediamanager/0.4.5",
+      "files": [
+        "lib/MonoAndroid/Plugin.MediaManager.Abstractions.dll",
+        "lib/MonoAndroid/Plugin.MediaManager.Abstractions.xml",
+        "lib/MonoAndroid/Plugin.MediaManager.dll",
+        "lib/MonoAndroid/Plugin.MediaManager.xml",
+        "lib/Xamarin.Mac/Plugin.MediaManager.Abstractions.dll",
+        "lib/Xamarin.Mac/Plugin.MediaManager.Abstractions.xml",
+        "lib/Xamarin.Mac/Plugin.MediaManager.dll",
+        "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.MediaManager.dll",
+        "lib/Xamarin.iOS10/Plugin.MediaManager.xml",
+        "lib/Xamarin.tvOS/Plugin.MediaManager.Abstractions.dll",
+        "lib/Xamarin.tvOS/Plugin.MediaManager.Abstractions.xml",
+        "lib/Xamarin.tvOS/Plugin.MediaManager.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.Abstractions.xml",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.xml",
+        "lib/uap10.0/Plugin.MediaManager.Abstractions.dll",
+        "lib/uap10.0/Plugin.MediaManager.Abstractions.xml",
+        "lib/uap10.0/Plugin.MediaManager.XML",
+        "lib/uap10.0/Plugin.MediaManager.dll",
+        "lib/uap10.0/Plugin.MediaManager.pdb",
+        "lib/uap10.0/Properties/Plugin.MediaManager.UWP.rd.xml",
+        "plugin.mediamanager.0.4.5.nupkg.sha512",
+        "plugin.mediamanager.nuspec"
+      ]
+    },
+    "Plugin.MediaManager.Forms/0.4.5": {
+      "sha512": "djWih2/cBd8Sypg+TkDJ2eEQYUGtK7amFvPBlmRVeyetAIhMtPsrJkytvSRnVgYml1ArJvN6f33dc5U3U2avuA==",
+      "type": "package",
+      "path": "plugin.mediamanager.forms/0.4.5",
+      "files": [
+        "lib/MonoAndroid/Plugin.MediaManager.Forms.Android.dll",
+        "lib/MonoAndroid/Plugin.MediaManager.Forms.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.Forms.dll",
+        "lib/uap10.0/Plugin.MediaManager.Forms.UWP.dll",
+        "lib/uap10.0/Plugin.MediaManager.Forms.UWP.pdb",
+        "lib/uap10.0/Plugin.MediaManager.Forms.UWP.pri",
+        "lib/uap10.0/Plugin.MediaManager.Forms.dll",
+        "lib/uap10.0/Plugin.MediaManager.Forms.pdb",
+        "lib/uap10.0/Plugin.MediaManager.XamarinForms.UWP.rd.xml",
+        "lib/xamarinios/Plugin.MediaManager.Forms.dll",
+        "lib/xamarinios/Plugin.MediaManager.Forms.iOS.dll",
+        "plugin.mediamanager.forms.0.4.5.nupkg.sha512",
+        "plugin.mediamanager.forms.nuspec"
       ]
     },
     "runtime.any.System.Collections/4.0.11": {
@@ -22254,6 +22489,8 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
+      "Plugin.MediaManager >= 0.4.5",
+      "Plugin.MediaManager.Forms >= 0.4.5",
       "Xamarin.Forms >= 2.3.4.224"
     ],
     "UAP,Version=v10.0.10586": []
@@ -22290,6 +22527,8 @@
     },
     "dependencies": {
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+      "Plugin.MediaManager": "0.4.5",
+      "Plugin.MediaManager.Forms": "0.4.5",
       "Xamarin.Forms": "2.3.4.224"
     },
     "frameworks": {
@@ -22315,5 +22554,23 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 2.3.4.247 to 2.3.4.224. Reference the package directly from the project to select a different version. \r\n SeDailyXamarin.UWP (>= 1.0.0) -> Plugin.MediaManager.Forms (>= 0.4.5) -> Xamarin.Forms (>= 2.3.4.247) \r\n SeDailyXamarin.UWP (>= 1.0.0) -> Xamarin.Forms (>= 2.3.4.224)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "UAP,Version=v10.0.10586",
+        "UAP,Version=v10.0.10586/win10-arm",
+        "UAP,Version=v10.0.10586/win10-arm-aot",
+        "UAP,Version=v10.0.10586/win10-x64",
+        "UAP,Version=v10.0.10586/win10-x64-aot",
+        "UAP,Version=v10.0.10586/win10-x86",
+        "UAP,Version=v10.0.10586/win10-x86-aot"
+      ]
+    }
+  ]
 }
