@@ -11,7 +11,7 @@ namespace SeDailyXamarin.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 			LoadApplication(new App());
-
+            System.Diagnostics.Debug.WriteLine("Testing");
 			return base.FinishedLaunching(app, options);
 		}
 	}

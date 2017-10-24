@@ -83,10 +83,10 @@ namespace SeDailyXamarin.ViewModels
                 switch (item)
                 {
                     case MenuType.Podcast:
-                        feed = @"http://feeds.podtrac.com/9dPm65vdpLL1";
+                        feed = @"https://software-enginnering-daily-api.herokuapp.com/api";
                         break;
                     case MenuType.Twitter:
-                        feed = @"http://feeds.podtrac.com/9dPm65vdpLL1";
+                        feed = @"https://feeds.podtrac.com/9dPm65vdpLL1";
                         break;
                 }
                 Debug.WriteLine("The feed value is " + feed);
