@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using Xamarin.Forms;
+using SeDailyXamarin.Services;
+using System.IO;
+using Newtonsoft.Json.Linq;
 
 namespace SeDailyXamarin.ViewModels
 {
@@ -91,8 +94,8 @@ namespace SeDailyXamarin.ViewModels
                 }
                 Debug.WriteLine("The feed value is " + feed);
                 string responseString = await httpClient.GetStringAsync(feed);
-
-                Debug.WriteLine("The responsestring is " + responseString);
+                //var responseText = JObject.Parse(responseString);
+                Debug.WriteLine("The content is " + responseString);
                 FeedItems.Clear();
                 var items = await ParseFeed(responseString);
                 foreach (var feedItem in items)
