@@ -70,9 +70,6 @@
     <Compile Include="Views\NewItemPage.xaml.cs">
       <DependentUpon>NewItemPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PlayBack.xaml.cs">
-      <DependentUpon>PlayBack.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\PodcastPage.xaml.cs">
       <DependentUpon>PodcastPage.xaml</DependentUpon>
     </Compile>
@@ -80,7 +77,6 @@
       <DependentUpon>PodcastPlaybackPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RootPage.cs" />
-    <Compile Include="Services\PodCastStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -105,6 +101,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="CardView, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\XamarinForms.CardView.1.1.1\lib\portable45-net45+win8+wp8+wpa81\CardView.dll</HintPath>
+    </Reference>
     <Reference Include="ImageCircle.Forms.Plugin.Abstractions, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\portable-net45+wp80+win8+wpa81\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
     </Reference>
@@ -138,12 +137,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\PlayBack.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\PodcastPlaybackPage.xaml">

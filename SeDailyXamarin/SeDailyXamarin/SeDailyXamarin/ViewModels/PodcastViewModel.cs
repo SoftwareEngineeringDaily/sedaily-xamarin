@@ -12,6 +12,7 @@ using Xamarin.Forms;
 using SeDailyXamarin.Services;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace SeDailyXamarin.ViewModels
 {
@@ -86,16 +87,14 @@ namespace SeDailyXamarin.ViewModels
                 switch (item)
                 {
                     case MenuType.Podcast:
-                        feed = @"https://software-enginnering-daily-api.herokuapp.com/api";
+                        feed = @"https://software-enginnering-daily-api.herokuapp.com/api/posts";
                         break;
                     case MenuType.Twitter:
                         feed = @"https://feeds.podtrac.com/9dPm65vdpLL1";
                         break;
                 }
-                Debug.WriteLine("The feed value is " + feed);
+
                 string responseString = await httpClient.GetStringAsync(feed);
-                //var responseText = JObject.Parse(responseString);
-                Debug.WriteLine("The content is " + responseString);
                 FeedItems.Clear();
                 var items = await ParseFeed(responseString);
                 foreach (var feedItem in items)
@@ -124,24 +123,11 @@ namespace SeDailyXamarin.ViewModels
         {
             return await Task.Run(() =>
             {
-                var xdoc = XDocument.Parse(rss);
-                var id = 0;
-                return (from item in xdoc.Descendants("item")
-                        let enclosure = item.Element("enclosure")
-                        where enclosure != null
-                        select new FeedItem
-                        {
-                            Title = (string)item.Element("title"),
-                            Description = (string)item.Element("description"),
-                            Link = (string)item.Element("link"),
-                            PublishDate = (string)item.Element("pubDate"),
-                            Categories = (string)item.Element("category"),
-                            Mp3Url = (string)enclosure.Attribute("url"),
-                            Id = id++
-                        }).ToList();
+               return JsonConvert.DeserializeObject<List<FeedItem>>(rss);
+                
             });
         }
-        public FeedItem GetFeedItem(int id)
+        public FeedItem GetFeedItem(string id)
         {
             return FeedItems.FirstOrDefault(i => i.Id == id);
         }

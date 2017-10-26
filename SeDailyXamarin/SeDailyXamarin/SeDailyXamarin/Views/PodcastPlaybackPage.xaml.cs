@@ -21,28 +21,28 @@ namespace SeDailyXamarin.Views
             BindingContext = item;
 
             CrossMediaManager.Current.PlayingChanged += (sender, args) => ProgressBar.Progress = args.Progress;
-            CrossMediaManager.Current.Play(new MediaFile("file:///Users/user/Downloads/2560.mp3", MediaFileType.Audio));
+            CrossMediaManager.Current.Play(new MediaFile(item.Mp3, MediaFileType.Audio));
 
             webView.Source = new HtmlWebViewSource
             {
-                Html = item.Description
+                Html = item.Content.Rendered
             };
 
-            //ToolbarItem share = new ToolbarItem
-            //{
-            //    Command = new Command(() =>
-            //    { 
-            //        CrossShare.Current.Share(new Plugin.Share.Abstractions.ShareMessage
-            //        {
-            //            Text = $"Listening to SEDaily {item.Title} {item.Link}",
-            //            Title = "Share",
-            //            Url = item.Link
+            ToolbarItem share = new ToolbarItem
+            {
+                Command = new Command(() =>
+                {
+                    CrossShare.Current.Share(new Plugin.Share.Abstractions.ShareMessage
+                    {
+                        Text = $"Listening to SEDaily {item.Title} {item.Link}",
+                        Title = "Share",
+                        Url = item.Link
 
-            //        });
-            //    })
-            //};
+                    });
+                })
+            };
 
-            //ToolbarItems.Add(share);
+            ToolbarItems.Add(share);
 
             play.Clicked += (sender, args) => PlaybackController.Play();
             pause.Clicked += (sender, args) => PlaybackController.Pause();

@@ -1,89 +1,63 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+
 
 namespace SeDailyXamarin.Models
 {
     public class FeedItem : INotifyPropertyChanged
 
     {
-        public int Id { get; set; }
+       
 
+        [JsonProperty("date")]
+        public string Date { get; set; }
+
+        [JsonProperty("categories")]
+        public long[] Categories { get; set; }
+
+        [JsonProperty("_id")]
+        public string Id { get; set; }
+
+        [JsonProperty("content")]
+        public Content Content { get; set; }
+
+        [JsonProperty("link")]
         public string Link { get; set; }
-        
-        public string Description { get; set; }
-        
-        public string Categories { get; set; }
-        
-        public string Tag { get; set; }
 
+        [JsonProperty("score")]
+        public long Score { get; set; }
 
-        private string title;
-        public string Title
+        [JsonProperty("featuredImage")]
+        public string FeaturedImage { get; set; }
+
+        [JsonProperty("mp3")]
+        public string Mp3 { get; set; }
+
+        [JsonProperty("tags")]
+        public long[] Tags { get; set; }
+
+        [JsonProperty("title")]
+        public Title Title { get; set; }
+
+        public string Heading
         {
             get
             {
-                return title;
-            }
-            set
-            {
-                title = value;
-
+                return Title.Rendered;
             }
         }
-
-        public string SEDailyDefaultImage {
-            get
-            {
-                return "https://softwareengineeringdaily.com/wp-content/uploads/2015/08/sed_logo_updated.png";
-            }
-        }
-
-        private string mainImage;
-        public string MainImage
+        public string FormattedDate
         {
             get
             {
-                if (!string.IsNullOrWhiteSpace(mainImage))
+                if (DateTime.TryParse(Date, out DateTime dateValue))
                 {
-                    return SEDailyDefaultImage;
+                    return String.Format("{0:dddd, MMMM d, yyyy}", dateValue); ;
                 }
-
-                string imageDataSourcePattern = @"http://([\\w+?\\.\\w+])+([a-zA-Z0-9\\~\\!\\@\\#\\$\\%\\^\\&amp;\\*\\(\\)_\\-\\=\\+\\\\\\/\\?\\.\\:\\;\\'\\,]*)?.(?:jpg|bmp|gif|png";
-                Regex regex = new Regex(imageDataSourcePattern, RegexOptions.IgnoreCase);
-                MatchCollection matches = regex.Matches(Description);
-
-                if(matches.Count == 0)
-                {
-                    mainImage = SEDailyDefaultImage;
-                } else
-                {
-                    mainImage = matches[0].Value;
-                }
-
-                return mainImage;
+                return "";
             }
         }
-        public string CommentCount { get; set; }
-
-        private string publishDate;
-        public string PublishDate
-        {
-            get { return publishDate; }
-            set
-            {
-                DateTime time;
-                if (DateTime.TryParse(value, out time))
-                    publishDate = time.ToLocalTime().ToString("D");
-                else
-                    publishDate = value;
-            }
-        }
-
         private decimal progress = 0.0M;
         public decimal Progress
         {
@@ -91,10 +65,9 @@ namespace SeDailyXamarin.Models
             set { progress = value; OnPropertyChanged("Progress"); }
         }
 
-        public string Mp3Url { get; internal set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
-       
+
         /// <summary>
         /// TODO: Document
         /// </summary>
@@ -103,6 +76,22 @@ namespace SeDailyXamarin.Models
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(args));
         }
-       
+
     }
 }
+    
+public class Content
+{
+    [JsonProperty("protected")]
+    public bool Protected { get; set; }
+
+    [JsonProperty("rendered")]
+    public string Rendered { get; set; }
+}
+
+public class Title
+{
+    [JsonProperty("rendered")]
+    public string Rendered { get; set; }
+}
+

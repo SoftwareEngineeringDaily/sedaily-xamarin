@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SeDailyXamarin.Views.PodcastPage"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
-             IsBusy="{Binding IsBusy}"
-             Title="{Binding Title}">
+             IsBusy="{Binding IsBusy}">
     
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <ListView x:Name="listView"
@@ -20,26 +19,13 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Padding="5">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="70"/>
-                                <ColumnDefinition Width="5"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Image Source="{Binding Image}" HeightRequest="70" 
+                        <StackLayout>
+                            <Label Text="{Binding Heading}" FontSize="Small" LineBreakMode="WordWrap"/>
+                            <Label Text="{Binding FormattedDate}" TextColor="#3498DB" FontSize="Small" LineBreakMode="NoWrap"/>
+                            <Image Source="{Binding FeaturedImage}" HeightRequest="100"
                      VerticalOptions="StartAndExpand"
                      HorizontalOptions="StartAndExpand" Aspect="AspectFill"/>
-
-                            <StackLayout Grid.Column="2"
-                           Spacing="4"
-                           VerticalOptions="Center">
-                                <Label Text="{Binding Title}" FontSize="Small" LineBreakMode="WordWrap"/>
-                                <Label Text="{Binding PublishDate}" TextColor="#3498DB" FontSize="Small" LineBreakMode="NoWrap"/>
-                                <Label Text="{Binding Caption}" FontSize="Small" LineBreakMode="WordWrap"/>
-                            </StackLayout>
-
-
-                        </Grid>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
