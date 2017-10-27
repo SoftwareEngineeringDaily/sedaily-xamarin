@@ -22500,12 +22500,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\SeDailyXamarin.UWP.csproj",
+      "projectUniqueName": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\SeDailyXamarin.UWP.csproj",
       "projectName": "SeDailyXamarin.UWP",
-      "projectPath": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\SeDailyXamarin.UWP.csproj",
-      "projectJsonPath": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\project.json",
+      "projectPath": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\SeDailyXamarin.UWP.csproj",
+      "projectJsonPath": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\project.json",
       "packagesPath": "C:\\Users\\Nelly\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\obj\\",
+      "outputPath": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\Nelly\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22518,8 +22518,8 @@
       "frameworks": {
         "uap10.0.10586": {
           "projectReferences": {
-            "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.csproj": {
-              "projectPath": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.csproj"
+            "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.csproj": {
+              "projectPath": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.csproj"
             }
           }
         }
