@@ -4,6 +4,7 @@ using Plugin.MediaManager.Abstractions.Enums;
 using Plugin.MediaManager.Abstractions.Implementations;
 using Plugin.Share;
 using SeDailyXamarin.Models;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,12 +21,23 @@ namespace SeDailyXamarin.Views
 
             BindingContext = item;
 
-            CrossMediaManager.Current.PlayingChanged += (sender, args) => ProgressBar.Progress = args.Progress;
-            CrossMediaManager.Current.Play(new MediaFile(item.Mp3, MediaFileType.Audio));
+
+            var file = "http://techslides.com/demos/samples/sample.mp3";
+            MediaFile mediaFile = new MediaFile(item.Mp3, MediaFileType.Audio);
+           
+            CrossMediaManager.Current.Play(mediaFile);
+           
+            CrossMediaManager.Current.PlayingChanged += (sender, e) =>
+            {
+                PlayBackSlider.Maximum = e.Duration.TotalMilliseconds;
+                PlayBackSlider.Value = e.Position.TotalMilliseconds;
+                Elapsed.Text = GetFormattedTime(e.Position.TotalMilliseconds);
+                Remaining.Text = GetFormattedTime(e.Duration.TotalMilliseconds - e.Position.TotalMilliseconds);
+            };
 
             webView.Source = new HtmlWebViewSource
             {
-                Html = item.Content.Rendered
+                Html = "Comments"
             };
 
             ToolbarItem share = new ToolbarItem
@@ -48,21 +60,18 @@ namespace SeDailyXamarin.Views
             pause.Clicked += (sender, args) => PlaybackController.Pause();
             stop.Clicked += (sender, args) => PlaybackController.Stop();
 
-            if (Device.OS == TargetPlatform.Android || Device.OS == TargetPlatform.WinPhone || App.IsWindows10)
-            {
-                play.Text = "Play";
-                pause.Text = "Pause";
-                stop.Text = "Stop";
-            }
 
-            if ((Device.OS == TargetPlatform.WinPhone || Device.OS == TargetPlatform.Windows) && !App.IsWindows10)
+        }
+        public string GetFormattedTime(double value)
+        {
+            var span = TimeSpan.FromMilliseconds(value);
+            if (span.Hours > 0)
             {
-                this.BackgroundColor = Color.White;
-                this.title.TextColor = Color.Black;
-                this.date.TextColor = Color.Black;
-                this.play.TextColor = Color.Black;
-                this.pause.TextColor = Color.Black;
-                this.stop.TextColor = Color.Black;
+                return string.Format("{0}:{1:00}:{2:00}", (int)span.TotalHours, span.Minutes, span.Seconds);
+            }
+            else
+            {
+                return string.Format("{0}:{1:00}", (int)span.Minutes, span.Seconds);
             }
         }
     }

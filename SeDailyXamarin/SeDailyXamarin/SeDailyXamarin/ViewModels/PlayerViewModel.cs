@@ -53,18 +53,5 @@ namespace SeDailyXamarin.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-        public string GetFormattedTime(int value)
-        {
-            var span = TimeSpan.FromMilliseconds(value);
-            if (span.Hours > 0)
-            {
-                return string.Format("{0}:{1:00}:{2:00}", (int)span.TotalHours, span.Minutes, span.Seconds);
-            }
-            else
-            {
-                return string.Format("{0}:{1:00}", (int)span.Minutes, span.Seconds);
-            }
-        }
     }
 }

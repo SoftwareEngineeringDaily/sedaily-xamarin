@@ -59,7 +59,7 @@ namespace SeDailyXamarin.Views
                         Pages.Add(id, new NavigationPage(new PodcastPage(id)));
                         break;
                     case MenuType.Playlist:
-                        Pages.Add(id, new NavigationPage(new ItemDetailPage()));
+                        Pages.Add(id, new NavigationPage(new HomePage()));
                         break;
                     case MenuType.Twitter:
                         Pages.Add(id, new NavigationPage(new PodcastPage(id)));

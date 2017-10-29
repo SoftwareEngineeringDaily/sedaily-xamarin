@@ -8,7 +8,7 @@ namespace SeDailyXamarin.Models
     public class FeedItem : INotifyPropertyChanged
 
     {
-       
+
 
         [JsonProperty("date")]
         public string Date { get; set; }
@@ -79,7 +79,7 @@ namespace SeDailyXamarin.Models
 
     }
 }
-    
+
 public class Content
 {
     [JsonProperty("protected")]
@@ -94,4 +94,3 @@ public class Title
     [JsonProperty("rendered")]
     public string Rendered { get; set; }
 }
-
