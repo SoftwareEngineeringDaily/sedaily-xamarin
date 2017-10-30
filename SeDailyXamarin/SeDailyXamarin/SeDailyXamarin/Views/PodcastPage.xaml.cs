@@ -37,6 +37,7 @@ namespace SeDailyXamarin.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            //FeaturedImageView.WidthRequestProperty = this.Width;
             if (ViewModel == null || !ViewModel.CanLoadMore || ViewModel.IsBusy || ViewModel.FeedItems.Count > 0)
                 return;
 

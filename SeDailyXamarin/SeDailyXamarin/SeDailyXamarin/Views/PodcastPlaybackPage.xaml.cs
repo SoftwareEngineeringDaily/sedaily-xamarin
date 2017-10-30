@@ -23,7 +23,17 @@ namespace SeDailyXamarin.Views
 
 
             var file = "https://audioboom.com/posts/5766044-follow-up-305.mp3?source=rss&amp;stitched=1";
-            MediaFile mediaFile = new MediaFile(item.Mp3, MediaFileType.Audio);
+            MediaFile mediaFile = new MediaFile(item.Mp3, MediaFileType.Audio)
+            {
+                Url = item.Mp3,
+                Type = MediaFileType.Audio,
+                Metadata = new MediaFileMetadata()
+                {
+                    Title = item.Heading
+                   
+                }
+            };
+                
            
             CrossMediaManager.Current.Play(mediaFile);
            
@@ -37,14 +47,12 @@ namespace SeDailyXamarin.Views
                 PlayBackSlider.Value = e.Position.TotalMilliseconds;
                 Elapsed.Text = GetFormattedTime(e.Position.TotalMilliseconds);
                 Remaining.Text = GetFormattedTime(e.Duration.TotalMilliseconds - e.Position.TotalMilliseconds);
-                debug1.Text = "maximum: " + GetFormattedTime(PlayBackSlider.Maximum);
-                debug2.Text = "value: " + GetFormattedTime(PlayBackSlider.Value);
+               
             };
             CrossMediaManager.Current.MediaFinished += (sender, e) =>
             {
                 PlayBackSlider.Value = PlayBackSlider.Maximum;
-                debug1.Text = "maximum: " + PlayBackSlider.Maximum.ToString();
-                debug2.Text = "value: " + PlayBackSlider.Value.ToString();
+                
             };
 
             webView.Source = new HtmlWebViewSource

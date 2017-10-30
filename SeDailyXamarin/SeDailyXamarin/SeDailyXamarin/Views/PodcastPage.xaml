@@ -19,12 +19,16 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout>
+                        <StackLayout Margin="10,0,5,0" WidthRequest="400" HeightRequest="300">
                             <Label Text="{Binding Heading}" FontSize="Small" LineBreakMode="WordWrap"/>
                             <Label Text="{Binding FormattedDate}" TextColor="#3498DB" FontSize="Small" LineBreakMode="NoWrap"/>
-                            <Image Source="{Binding FeaturedImage}" HeightRequest="100"
-                     VerticalOptions="StartAndExpand"
-                     HorizontalOptions="StartAndExpand" Aspect="AspectFill"/>
+                            <Image x:Name = "FeaturedImageView"
+                                    Source="{Binding FeaturedImage}" 
+                                      WidthRequest="400"
+                                     HeightRequest="250"
+                                     VerticalOptions="StartAndExpand"
+                                     HorizontalOptions="StartAndExpand" 
+                                     Aspect="Fill"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

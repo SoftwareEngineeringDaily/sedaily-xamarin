@@ -7,10 +7,6 @@
         <StackLayout Padding="10" Spacing="5">
             <Label Text="{Binding Heading}" FontSize="Medium" x:Name="title" />
             <Label Text="{Binding FormattedDate}" x:Name="date"/>
-
-            <Label x:Name ="debug1"  VerticalOptions="StartAndExpand"></Label>
-            <Label x:Name ="debug2"  VerticalOptions="StartAndExpand"></Label>
-            <Label x:Name ="debug3"  VerticalOptions="StartAndExpand"></Label>
             <StackLayout Orientation="Horizontal">
                
                 <Label x:Name ="Elapsed"  VerticalOptions="StartAndExpand"></Label>
