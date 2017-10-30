@@ -7,11 +7,14 @@
         <StackLayout Padding="10" Spacing="5">
             <Label Text="{Binding Heading}" FontSize="Medium" x:Name="title" />
             <Label Text="{Binding FormattedDate}" x:Name="date"/>
-            <ProgressBar x:Name="ProgressBar"/>
 
+            <Label x:Name ="debug1"  VerticalOptions="StartAndExpand"></Label>
+            <Label x:Name ="debug2"  VerticalOptions="StartAndExpand"></Label>
+            <Label x:Name ="debug3"  VerticalOptions="StartAndExpand"></Label>
             <StackLayout Orientation="Horizontal">
+               
                 <Label x:Name ="Elapsed"  VerticalOptions="StartAndExpand"></Label>
-                <Slider 
+                <Slider Value="{Binding Mode=OneWayToSource}"
                         x:Name="PlayBackSlider"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="End"
@@ -24,7 +27,10 @@
                 <Button  x:Name="play" Text="Play" HorizontalOptions="Center"/>
                 <Button  x:Name="pause" Text="Pause" HorizontalOptions="Center"/>
                 <Button  x:Name="stop" Text="Stop" HorizontalOptions="Center"/>
+               
             </StackLayout>
+            <Button  x:Name="forward" Text="Forward30Seconds" HorizontalOptions="Center"/>
+            <Button  x:Name="rewind" Text="Rewind10Seconds" HorizontalOptions="Center"/>
             <WebView x:Name="webView" VerticalOptions="FillAndExpand"></WebView>
         </StackLayout>
     </ContentPage.Content>

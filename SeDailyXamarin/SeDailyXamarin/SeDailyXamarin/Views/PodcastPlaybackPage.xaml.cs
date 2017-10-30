@@ -22,17 +22,29 @@ namespace SeDailyXamarin.Views
             BindingContext = item;
 
 
-            var file = "http://techslides.com/demos/samples/sample.mp3";
+            var file = "https://audioboom.com/posts/5766044-follow-up-305.mp3?source=rss&amp;stitched=1";
             MediaFile mediaFile = new MediaFile(item.Mp3, MediaFileType.Audio);
            
             CrossMediaManager.Current.Play(mediaFile);
            
             CrossMediaManager.Current.PlayingChanged += (sender, e) =>
             {
-                PlayBackSlider.Maximum = e.Duration.TotalMilliseconds;
+               if(e.Duration.Milliseconds > 0)
+               {
+                    PlayBackSlider.Maximum = e.Duration.TotalMilliseconds;
+               }
+                
                 PlayBackSlider.Value = e.Position.TotalMilliseconds;
                 Elapsed.Text = GetFormattedTime(e.Position.TotalMilliseconds);
                 Remaining.Text = GetFormattedTime(e.Duration.TotalMilliseconds - e.Position.TotalMilliseconds);
+                debug1.Text = "maximum: " + GetFormattedTime(PlayBackSlider.Maximum);
+                debug2.Text = "value: " + GetFormattedTime(PlayBackSlider.Value);
+            };
+            CrossMediaManager.Current.MediaFinished += (sender, e) =>
+            {
+                PlayBackSlider.Value = PlayBackSlider.Maximum;
+                debug1.Text = "maximum: " + PlayBackSlider.Maximum.ToString();
+                debug2.Text = "value: " + PlayBackSlider.Value.ToString();
             };
 
             webView.Source = new HtmlWebViewSource
@@ -59,9 +71,30 @@ namespace SeDailyXamarin.Views
             play.Clicked += (sender, args) => PlaybackController.Play();
             pause.Clicked += (sender, args) => PlaybackController.Pause();
             stop.Clicked += (sender, args) => PlaybackController.Stop();
+            forward.Clicked += (sender, args) =>
+            {
+                PlayBackSlider.Value += 30000;
+                PlaybackController.SeekTo(PlayBackSlider.Value/1000);
+            };
+            rewind.Clicked += (sender, args) =>
+            {
+                if(PlayBackSlider.Value <= 10000)
+                {
+                    PlayBackSlider.Value = 0;
+
+                }
+                else
+                {
+                    PlayBackSlider.Value -= 10000;
+                   
+                }
+                PlaybackController.SeekTo(PlayBackSlider.Value / 1000);
+            };
+           // PlayBackSlider.PropertyChanged += (sender, args) => PlaybackController.SeekTo(PlayBackSlider.Value);
 
 
         }
+
         public string GetFormattedTime(double value)
         {
             var span = TimeSpan.FromMilliseconds(value);

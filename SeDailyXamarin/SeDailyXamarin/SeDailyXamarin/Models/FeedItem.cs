@@ -5,10 +5,8 @@ using System.ComponentModel;
 
 namespace SeDailyXamarin.Models
 {
-    public class FeedItem : INotifyPropertyChanged
-
+    public class FeedItem
     {
-
 
         [JsonProperty("date")]
         public string Date { get; set; }
@@ -58,25 +56,6 @@ namespace SeDailyXamarin.Models
                 return "";
             }
         }
-        private decimal progress = 0.0M;
-        public decimal Progress
-        {
-            get { return progress; }
-            set { progress = value; OnPropertyChanged("Progress"); }
-        }
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// TODO: Document
-        /// </summary>
-        /// <param name="args"></param>
-        private void OnPropertyChanged(string args)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(args));
-        }
-
     }
 }
 
