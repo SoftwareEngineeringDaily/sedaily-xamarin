@@ -33,7 +33,7 @@
                             Grid.Row="1"
                             HorizontalOptions="Start"
                             VerticalOptions="End"
-                            Source="scott159.png"
+                            Source="sedaily_logo.png"
                             WidthRequest="75" HeightRequest="75"/>
                         <Label 
                             Grid.Column="1"

@@ -7,6 +7,8 @@
         <StackLayout Padding="10" Spacing="5">
             <Label Text="{Binding Heading}" FontSize="Medium" x:Name="title" />
             <Label Text="{Binding FormattedDate}" x:Name="date"/>
+            <Label  Text ="Buffered" x:Name="Buffered"/>
+            <Label Text="Metadata" x:Name="Metadata" />
             <StackLayout Orientation="Horizontal">
                
                 <Label x:Name ="Elapsed"  VerticalOptions="StartAndExpand"></Label>
@@ -18,15 +20,15 @@
                        />
                 <Label  x:Name="Remaining" VerticalOptions="EndAndExpand"/>
             </StackLayout>
-            
+
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10">
-                <Button  x:Name="play" Text="Play" HorizontalOptions="Center"/>
-                <Button  x:Name="pause" Text="Pause" HorizontalOptions="Center"/>
-                <Button  x:Name="stop" Text="Stop" HorizontalOptions="Center"/>
-               
+                <Button  x:Name="rewind" Text="Rewind10Seconds" HorizontalOptions="Center"/>
+                <Button  x:Name="playPause" Text="PlayPause" HorizontalOptions="Center"/>
+                <Button  x:Name="forward" Text="Forward30Seconds" HorizontalOptions="Center"/>
+
             </StackLayout>
-            <Button  x:Name="forward" Text="Forward30Seconds" HorizontalOptions="Center"/>
-            <Button  x:Name="rewind" Text="Rewind10Seconds" HorizontalOptions="Center"/>
+           
+            
             <WebView x:Name="webView" VerticalOptions="FillAndExpand"></WebView>
         </StackLayout>
     </ContentPage.Content>

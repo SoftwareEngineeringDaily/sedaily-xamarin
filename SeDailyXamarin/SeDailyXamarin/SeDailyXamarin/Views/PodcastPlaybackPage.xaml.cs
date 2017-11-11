@@ -33,8 +33,8 @@ namespace SeDailyXamarin.Views
                    
                 }
             };
-                
-           
+
+            Metadata.Text = mediaFile.Metadata.Duration.ToString();
             CrossMediaManager.Current.Play(mediaFile);
            
             CrossMediaManager.Current.PlayingChanged += (sender, e) =>
@@ -47,7 +47,8 @@ namespace SeDailyXamarin.Views
                 PlayBackSlider.Value = e.Position.TotalMilliseconds;
                 Elapsed.Text = GetFormattedTime(e.Position.TotalMilliseconds);
                 Remaining.Text = GetFormattedTime(e.Duration.TotalMilliseconds - e.Position.TotalMilliseconds);
-               
+
+
             };
             CrossMediaManager.Current.MediaFinished += (sender, e) =>
             {
@@ -55,6 +56,10 @@ namespace SeDailyXamarin.Views
                 
             };
 
+            CrossMediaManager.Current.BufferingChanged += (sender, e) =>
+            {
+                Buffered.Text = GetFormattedTime(e.BufferedTime.TotalMilliseconds);
+            };
             webView.Source = new HtmlWebViewSource
             {
                 Html = "Comments"
@@ -76,9 +81,7 @@ namespace SeDailyXamarin.Views
 
             ToolbarItems.Add(share);
 
-            play.Clicked += (sender, args) => PlaybackController.Play();
-            pause.Clicked += (sender, args) => PlaybackController.Pause();
-            stop.Clicked += (sender, args) => PlaybackController.Stop();
+            playPause.Clicked += (sender, args) => PlaybackController.PlayPause();
             forward.Clicked += (sender, args) =>
             {
                 PlayBackSlider.Value += 30000;
