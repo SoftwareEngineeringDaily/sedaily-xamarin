@@ -1,4 +1,4 @@
-﻿namespace SeDailyXamarin.Models
+﻿namespace SeDailyXamarin.PageModels
 {
     public class Item : BaseDataObject
     {

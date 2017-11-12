@@ -1,7 +1,7 @@
 ﻿using System;
 using SeDailyXamarin.Helpers;
 
-namespace SeDailyXamarin.Models
+namespace SeDailyXamarin.PageModels
 {
     public class BaseDataObject : ObservableObject
     {

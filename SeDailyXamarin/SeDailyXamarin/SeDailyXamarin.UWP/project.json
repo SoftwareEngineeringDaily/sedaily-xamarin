@@ -1,5 +1,6 @@
 ﻿{
   "dependencies": {
+    "FreshMvvm": "2.2.3",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "Plugin.MediaManager": "0.4.5",
     "Plugin.MediaManager.Forms": "0.4.5",

@@ -1,4 +1,4 @@
-﻿using SeDailyXamarin.Models;
+﻿using SeDailyXamarin.PageModels;
 using SeDailyXamarin.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -12,13 +12,13 @@ namespace SeDailyXamarin.Views
     public class RootPage : MasterDetailPage
     {
         public static bool IsUWPDesktop { get; set; }
-        Dictionary<MenuType, NavigationPage> Pages { get; set; }
+        Dictionary<MenuType, Page> Pages { get; set; }
         public RootPage()
         {
             if (IsUWPDesktop)
                 this.MasterBehavior = MasterBehavior.Popover;
 
-            Pages = new Dictionary<MenuType, NavigationPage>();
+            Pages = new Dictionary<MenuType, Page>();
             Master = new MenuPage(this);
             BindingContext = new BaseViewModel
             {
@@ -56,20 +56,29 @@ namespace SeDailyXamarin.Views
                         Pages.Add(id, new NavigationPage(new AboutPage()));
                         break;
                     case MenuType.Podcast:
-                        Pages.Add(id, new NavigationPage(new PodcastPage(id)));
+                        Pages.Add(id,  new TabbedPage
+                        {
+                            Icon = "slideout.png",
+                            Children = {
+
+                                       new NavigationPage(new PodcastPage(id){
+                                            Title = "All"
+
+                                        }),
+
+                                        new NavigationPage(new PodcastPage(id){
+                                            Title = "All"
+
+                                        }),
+                            }
+
+                        });
+                       // Pages.Add(id, new NavigationPage(new PodcastPage(id)));
                         break;
                     case MenuType.Playlist:
-                        Pages.Add(id, new NavigationPage(new HomePage()));
+                        Pages.Add(id, new NavigationPage(new PlayListPage(id)));
                         break;
-                    case MenuType.Twitter:
-                        Pages.Add(id, new NavigationPage(new PodcastPage(id)));
-                        break;
-                    case MenuType.Slack:
-                        Pages.Add(id, new NavigationPage(new PodcastPage(id)));
-                        break;
-                    case MenuType.Store:
-                        Pages.Add(id, new NavigationPage(new PodcastPage(id)));
-                        break;
+                   
 
                 }
             }

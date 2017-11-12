@@ -2,6 +2,17 @@
   "version": 3,
   "targets": {
     "UAP,Version=v10.0.10586": {
+      "FreshMvvm/2.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -2189,6 +2200,17 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-arm": {
+      "FreshMvvm/2.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -4484,6 +4506,17 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-arm-aot": {
+      "FreshMvvm/2.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -6815,6 +6848,17 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-x64": {
+      "FreshMvvm/2.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -9119,6 +9163,17 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-x64-aot": {
+      "FreshMvvm/2.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -11459,6 +11514,17 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-x86": {
+      "FreshMvvm/2.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -13763,6 +13829,17 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-x86-aot": {
+      "FreshMvvm/2.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/FreshIOC.dll": {},
+          "lib/netstandard1.0/FreshMvvm.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -16104,6 +16181,21 @@
     }
   },
   "libraries": {
+    "FreshMvvm/2.2.3": {
+      "sha512": "qRAn7HM7YAzHPEIsAx3qA2KlHkj0twWg85tG3K5VYlyU4i91yAhii7PrGC5YVoeb+7mU8REsg2p33NJtBiID+Q==",
+      "type": "package",
+      "path": "freshmvvm/2.2.3",
+      "files": [
+        "freshmvvm.2.2.3.nupkg.sha512",
+        "freshmvvm.nuspec",
+        "lib/netstandard1.0/FreshIOC.dll",
+        "lib/netstandard1.0/FreshMvvm.dll",
+        "lib/netstandard1.0/FreshMvvm.pdb",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshIOC.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshMvvm.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshMvvm.pdb"
+      ]
+    },
     "Microsoft.CSharp/4.0.1": {
       "sha512": "17h8b5mXa87XYKrrVqdgZ38JefSUqLChUQpXgSnpzsM0nDOhE40FTeNWOJ/YmySGV6tG6T8+hjz6vxbknHJr6A==",
       "type": "package",
@@ -22488,6 +22580,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "FreshMvvm >= 2.2.3",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
       "Plugin.MediaManager >= 0.4.5",
       "Plugin.MediaManager.Forms >= 0.4.5",
@@ -22500,12 +22593,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\SeDailyXamarin.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\SeDailyXamarin.UWP.csproj",
       "projectName": "SeDailyXamarin.UWP",
-      "projectPath": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\SeDailyXamarin.UWP.csproj",
-      "projectJsonPath": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\project.json",
+      "projectPath": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\SeDailyXamarin.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\project.json",
       "packagesPath": "C:\\Users\\Nelly\\.nuget\\packages\\",
-      "outputPath": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\obj\\",
+      "outputPath": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\Nelly\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22518,14 +22611,15 @@
       "frameworks": {
         "uap10.0.10586": {
           "projectReferences": {
-            "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.csproj": {
-              "projectPath": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.csproj"
+            "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.csproj": {
+              "projectPath": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.csproj"
             }
           }
         }
       }
     },
     "dependencies": {
+      "FreshMvvm": "2.2.3",
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
       "Plugin.MediaManager": "0.4.5",
       "Plugin.MediaManager.Forms": "0.4.5",

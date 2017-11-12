@@ -1,4 +1,4 @@
-﻿using SeDailyXamarin.Models;
+﻿using SeDailyXamarin.PageModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -102,17 +102,13 @@ namespace SeDailyXamarin.ViewModels
                     FeedItems.Add(feedItem);
                 }
             }
-            catch
+            catch(Exception e)
             {
                 error = true;
-            }
-
-            if (error)
-            {
                 ContentPage page = new ContentPage();
-                Task result = page.DisplayAlert("Error", "Unable to load podcast feed.", "OK");
-
+                Task result = page.DisplayAlert("Error", $"Unable to load podcast feed.{e.Message}", "OK");
             }
+
 
 
             IsBusy = false;

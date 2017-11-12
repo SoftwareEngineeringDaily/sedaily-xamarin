@@ -3,8 +3,9 @@ using System;
 using System.ComponentModel;
 
 
-namespace SeDailyXamarin.Models
+namespace SeDailyXamarin.PageModels
 {
+
     public class FeedItem
     {
 

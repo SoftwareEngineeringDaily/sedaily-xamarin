@@ -1,4 +1,5 @@
-﻿using SeDailyXamarin.Views;
+﻿using SeDailyXamarin.PageModels;
+using SeDailyXamarin.Views;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,8 +12,9 @@ namespace SeDailyXamarin
         public App()
         {
             InitializeComponent();
-            MainPage = new RootPage();
+             MainPage = new RootPage();
             //SetMainPage();
+
         }
 
         public static bool IsWindows10 { get; set; }

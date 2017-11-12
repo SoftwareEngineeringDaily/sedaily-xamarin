@@ -7,10 +7,12 @@
         <StackLayout Padding="10" Spacing="5">
             <Label Text="{Binding Heading}" FontSize="Medium" x:Name="title" />
             <Label Text="{Binding FormattedDate}" x:Name="date"/>
-            <Label  Text ="Buffered" x:Name="Buffered"/>
-            <Label Text="Metadata" x:Name="Metadata" />
-            <StackLayout Orientation="Horizontal">
-               
+
+            <WebView x:Name="webView" VerticalOptions="FillAndExpand"></WebView>
+            
+            <StackLayout Orientation="Horizontal"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.85}">
                 <Label x:Name ="Elapsed"  VerticalOptions="StartAndExpand"></Label>
                 <Slider Value="{Binding Mode=OneWayToSource}"
                         x:Name="PlayBackSlider"
@@ -22,14 +24,12 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10">
-                <Button  x:Name="rewind" Text="Rewind10Seconds" HorizontalOptions="Center"/>
-                <Button  x:Name="playPause" Text="PlayPause" HorizontalOptions="Center"/>
-                <Button  x:Name="forward" Text="Forward30Seconds" HorizontalOptions="Center"/>
+                <Button  x:Name="rewind" Image="ten_sec_backward.png" HorizontalOptions="Center"/>
+                <Button  x:Name="playPause" Image="play.png" HorizontalOptions="Center"/>
+                <Button  x:Name="forward" Image="ten_sec_forward.png" HorizontalOptions="Center"/>
 
             </StackLayout>
-           
-            
-            <WebView x:Name="webView" VerticalOptions="FillAndExpand"></WebView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,4 +1,4 @@
-﻿using SeDailyXamarin.Models;
+﻿using SeDailyXamarin.PageModels;
 
 namespace SeDailyXamarin.ViewModels
 {

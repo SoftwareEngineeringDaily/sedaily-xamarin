@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 
 using SeDailyXamarin.Helpers;
-using SeDailyXamarin.Models;
+using SeDailyXamarin.PageModels;
 using SeDailyXamarin.Views;
 
 using Xamarin.Forms;

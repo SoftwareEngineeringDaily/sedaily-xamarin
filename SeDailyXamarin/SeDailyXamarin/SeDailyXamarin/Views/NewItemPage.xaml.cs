@@ -1,6 +1,6 @@
 ﻿using System;
 
-using SeDailyXamarin.Models;
+using SeDailyXamarin.PageModels;
 
 using Xamarin.Forms;
 

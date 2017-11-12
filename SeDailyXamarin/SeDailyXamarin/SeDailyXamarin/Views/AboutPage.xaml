@@ -9,7 +9,7 @@
   </ContentPage.BindingContext>
     <ScrollView>
         <StackLayout Orientation="Vertical" Spacing="10">
-            <Image Aspect="AspectFill" Source="sedailylogo.png"/>
+            <Image Aspect="AspectFill" Source="sedaily_logo.png" HeightRequest="200"/>
             <StackLayout Spacing="10" 
                    Padding="10" 
                    VerticalOptions="FillAndExpand">

@@ -3,7 +3,7 @@ using Plugin.MediaManager.Abstractions;
 using Plugin.MediaManager.Abstractions.Enums;
 using Plugin.MediaManager.Abstractions.Implementations;
 using Plugin.Share;
-using SeDailyXamarin.Models;
+using SeDailyXamarin.PageModels;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -34,7 +34,7 @@ namespace SeDailyXamarin.Views
                 }
             };
 
-            Metadata.Text = mediaFile.Metadata.Duration.ToString();
+
             CrossMediaManager.Current.Play(mediaFile);
            
             CrossMediaManager.Current.PlayingChanged += (sender, e) =>
@@ -55,11 +55,17 @@ namespace SeDailyXamarin.Views
                 PlayBackSlider.Value = PlayBackSlider.Maximum;
                 
             };
-
-            CrossMediaManager.Current.BufferingChanged += (sender, e) =>
+            CrossMediaManager.Current.StatusChanged += (sender, e) =>
             {
-                Buffered.Text = GetFormattedTime(e.BufferedTime.TotalMilliseconds);
+                if(e.Status == MediaPlayerStatus.Playing)
+                {
+                    playPause.Image = "pause.png";
+                } else
+                {
+                    playPause.Image = "play.png";
+                }
             };
+
             webView.Source = new HtmlWebViewSource
             {
                 Html = "Comments"
@@ -81,10 +87,18 @@ namespace SeDailyXamarin.Views
 
             ToolbarItems.Add(share);
 
-            playPause.Clicked += (sender, args) => PlaybackController.PlayPause();
-            forward.Clicked += (sender, args) =>
+            playPause.Clicked += (sender, e) =>
             {
-                PlayBackSlider.Value += 30000;
+                PlaybackController.PlayPause();
+                
+            };
+            forward.Clicked += (sender, e) =>
+            {
+                PlayBackSlider.Value += 10000;
+                if(CrossMediaManager.Current.Status == MediaPlayerStatus.Paused)
+                {
+                    PlaybackController.Play();
+                }
                 PlaybackController.SeekTo(PlayBackSlider.Value/1000);
             };
             rewind.Clicked += (sender, args) =>
@@ -98,6 +112,10 @@ namespace SeDailyXamarin.Views
                 {
                     PlayBackSlider.Value -= 10000;
                    
+                }
+                if (CrossMediaManager.Current.Status == MediaPlayerStatus.Paused)
+                {
+                    PlaybackController.Play();
                 }
                 PlaybackController.SeekTo(PlayBackSlider.Value / 1000);
             };

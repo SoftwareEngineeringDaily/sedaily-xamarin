@@ -1,5 +1,5 @@
 ﻿using SeDailyXamarin.Helpers;
-using SeDailyXamarin.Models;
+using SeDailyXamarin.PageModels;
 using SeDailyXamarin.Services;
 
 using Xamarin.Forms;

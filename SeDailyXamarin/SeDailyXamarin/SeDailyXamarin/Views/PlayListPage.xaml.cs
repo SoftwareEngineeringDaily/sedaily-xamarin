@@ -1,4 +1,5 @@
-﻿using SeDailyXamarin.PageModels;
+﻿using SeDailyXamarin.Controls;
+using SeDailyXamarin.PageModels;
 using SeDailyXamarin.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -12,28 +13,18 @@ using Xamarin.Forms.Xaml;
 namespace SeDailyXamarin.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PodcastPage : ContentPage
+    public partial class PlayListPage : ContentPage
     {
         private PodcastViewModel ViewModel
         {
             get { return BindingContext as PodcastViewModel; }
         }
-
-        public PodcastPage(MenuType item)
+        public PlayListPage(MenuType item)
         {
+
             InitializeComponent();
 
             BindingContext = new PodcastViewModel(item);
-
-
-            listView.ItemTapped += (sender, args) =>
-            {
-                if (listView.SelectedItem == null)
-                    return;
-                this.Navigation.PushAsync(new PodcastPlaybackPage
-                   (listView.SelectedItem as FeedItem));
-                listView.SelectedItem = null;
-            };
         }
         protected override void OnAppearing()
         {
@@ -44,7 +35,5 @@ namespace SeDailyXamarin.Views
 
             ViewModel.LoadItemsCommand.Execute(null);
         }
-
-
     }
 }

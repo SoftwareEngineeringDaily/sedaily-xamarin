@@ -1,4 +1,4 @@
-﻿using SeDailyXamarin.Models;
+﻿using SeDailyXamarin.PageModels;
 using SeDailyXamarin.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -36,11 +36,12 @@ namespace SeDailyXamarin.Views
             ListViewMenu.ItemsSource = menuItems = new List<HomeMenuItem>
                 {
 
-                    new HomeMenuItem { Title = "About", MenuType = MenuType.About, Icon ="about.png"},
-                    new HomeMenuItem { Title = "Podcast", MenuType = MenuType.Podcast,Icon = "twitternav.png"  },
-                    new HomeMenuItem { Title = "Playlist", MenuType = MenuType.Playlist},
-                    new HomeMenuItem { Title = "Slack", MenuType = MenuType.Slack},
-                    new HomeMenuItem { Title = "Store", MenuType = MenuType.Store},
+                    new HomeMenuItem { Title = "About", MenuType = MenuType.About, Icon ="about_icon.png"},
+                    new HomeMenuItem { Title = "Podcast", MenuType = MenuType.Podcast,Icon = "podcast_icon.png"  },
+                    new HomeMenuItem { Title = "Playlist", MenuType = MenuType.Playlist, Icon = "playlist_icon.png"},
+                    new HomeMenuItem { Title = "Slack", MenuType = MenuType.Slack, Icon = "slack_icon.png"},
+                    new HomeMenuItem { Title = "Twitter", MenuType = MenuType.Twitter, Icon = "twitter_icon.png"},
+                    new HomeMenuItem { Title = "Store", MenuType = MenuType.Store, Icon = "store_icon"},
                     new HomeMenuItem { Title = "Profile", MenuType = MenuType.Profile, Icon = "profile_generic.png" },
 
 
