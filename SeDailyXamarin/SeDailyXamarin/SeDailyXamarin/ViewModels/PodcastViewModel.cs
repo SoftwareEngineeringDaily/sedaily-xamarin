@@ -28,6 +28,9 @@ namespace SeDailyXamarin.ViewModels
                 case MenuType.Podcast:
                     Title = "Hear Me";
                     break;
+                case MenuType.Playlist:
+                    Title = "Play";
+                    break;
                 
             }
         }
@@ -86,12 +89,16 @@ namespace SeDailyXamarin.ViewModels
                 string feed = string.Empty;
                 switch (item)
                 {
+                    case MenuType.Playlist:
+                        feed = @"https://software-enginnering-daily-api.herokuapp.com/api/posts";
+                        break;
                     case MenuType.Podcast:
                         feed = @"https://software-enginnering-daily-api.herokuapp.com/api/posts";
                         break;
                     case MenuType.Twitter:
                         feed = @"https://feeds.podtrac.com/9dPm65vdpLL1";
                         break;
+                   
                 }
 
                 string responseString = await httpClient.GetStringAsync(feed);
@@ -105,11 +112,14 @@ namespace SeDailyXamarin.ViewModels
             catch(Exception e)
             {
                 error = true;
-                ContentPage page = new ContentPage();
-                Task result = page.DisplayAlert("Error", $"Unable to load podcast feed.{e.Message}", "OK");
+                Debug.WriteLine(e.Message);
             }
 
-
+            if (error)
+            {
+                ContentPage page = new ContentPage();
+                Task result = page.DisplayAlert("Error", $"Unable to load podcast feed.", "OK");
+            }
 
             IsBusy = false;
 

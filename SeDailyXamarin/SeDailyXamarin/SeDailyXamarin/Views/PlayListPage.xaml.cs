@@ -25,6 +25,7 @@ namespace SeDailyXamarin.Views
             InitializeComponent();
 
             BindingContext = new PodcastViewModel(item);
+
         }
         protected override void OnAppearing()
         {

@@ -1,6 +1,5 @@
-﻿using SeDailyXamarin.PageModels;
+﻿
 using SeDailyXamarin.Views;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
