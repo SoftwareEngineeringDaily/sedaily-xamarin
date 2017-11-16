@@ -2,9 +2,9 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SeDailyXamarin.App">
   <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">#2196F3</Color>
-            <Color x:Key="PrimaryDark">#1976D2</Color>
-            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="Primary">#212223</Color>
+            <Color x:Key="PrimaryDark">#2c2d2d</Color>
+            <Color x:Key="Accent">#fffff</Color>
             <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
             <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
             <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
@@ -15,40 +15,6 @@
                 <Setter Property="BarTextColor" Value="White" />
             </Style>
 
-
-            <!-- Styles for common elements -->
-            <Style TargetType="Label">
-                <Setter Property="FontFamily">
-                    <Setter.Value>
-                        <OnPlatform x:TypeArguments="x:String">
-                            <OnPlatform.iOS>CircularSpotifyTxT-Book</OnPlatform.iOS>
-                            <OnPlatform.Android>circular_book.ttf#CircularSpotifyTxT-Book</OnPlatform.Android>
-                        </OnPlatform>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-
-            <!-- Styles for common elements -->
-            <Style TargetType="Label" x:Key="BoldLabel">
-                <Setter Property="FontFamily">
-                    <Setter.Value>
-                        <OnPlatform x:TypeArguments="x:String">
-                            <OnPlatform.iOS>CircularSpotifyTxT-Bold</OnPlatform.iOS>
-                            <OnPlatform.Android>circular_bold.ttf#CircularSpotifyTxT-Bold</OnPlatform.Android>
-                        </OnPlatform>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-            <Style TargetType="Label" x:Key="MediumLabel">
-                <Setter Property="FontFamily">
-                    <Setter.Value>
-                        <OnPlatform x:TypeArguments="x:String">
-                            <OnPlatform.iOS>CircularSpotifyTxT-Med</OnPlatform.iOS>
-                            <OnPlatform.Android>circular_medium.ttf#CircularSpotifyTxT-Med</OnPlatform.Android>
-                        </OnPlatform>
-                    </Setter.Value>
-                </Setter>
-            </Style>
 
         </ResourceDictionary>
     </Application.Resources>

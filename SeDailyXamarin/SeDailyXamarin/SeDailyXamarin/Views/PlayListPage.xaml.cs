@@ -3,6 +3,7 @@ using SeDailyXamarin.PageModels;
 using SeDailyXamarin.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,17 +16,19 @@ namespace SeDailyXamarin.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PlayListPage : ContentPage
     {
-        private PodcastViewModel ViewModel
+        private PlayListViewModel ViewModel
         {
-            get { return BindingContext as PodcastViewModel; }
+            get { return BindingContext as PlayListViewModel; }
         }
         public PlayListPage(MenuType item)
         {
 
             InitializeComponent();
 
-            BindingContext = new PodcastViewModel(item);
+            scrollview.ItemsSource = new PlayListViewModel(item).FeedItems;
 
+            //BindingContext = new PlayListViewModel(item);
+          
         }
         protected override void OnAppearing()
         {
@@ -36,5 +39,7 @@ namespace SeDailyXamarin.Views
 
             ViewModel.LoadItemsCommand.Execute(null);
         }
+        
+
     }
 }

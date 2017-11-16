@@ -37,6 +37,7 @@ namespace SeDailyXamarin.Controls
         public static readonly BindableProperty SelectedCommandProperty =
             BindableProperty.Create("SelectedCommand", typeof(ICommand), typeof(HorizontalScrollView), null);
 
+
         public ICommand SelectedCommand
         {
             get { return (ICommand)GetValue(SelectedCommandProperty); }

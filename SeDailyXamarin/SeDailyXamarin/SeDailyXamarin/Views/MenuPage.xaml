@@ -27,7 +27,7 @@
 
                         <BoxView Grid.ColumnSpan="3" 
                                  Grid.RowSpan="4"
-                                 BackgroundColor="#03A9F4"/>
+                                 BackgroundColor="#062f5d"/>
                         <controls:CircleImage
                             Grid.Column="1"
                             Grid.Row="1"
@@ -39,6 +39,7 @@
                             Grid.Column="1"
                             Grid.Row="2"
                             Text="SE Daliy"
+                            TextColor="White"
                             Style="{DynamicResource SubtitleStyle}"/>
                     </Grid>
                 </ListView.Header>

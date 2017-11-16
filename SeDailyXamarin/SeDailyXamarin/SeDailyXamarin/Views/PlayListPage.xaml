@@ -14,7 +14,7 @@
                         <On Platform="iOS" Value="false" />
                     </OnPlatform>-->
                 </ContentView.IsVisible>
-                <Label Text="Home" Style="{StaticResource MediumLabel}"  TextColor="#FFF" FontSize="16" 
+                <Label Text="Home"  TextColor="#FFF" FontSize="16" 
                 HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Fill" />
             </ContentView>
            <controls:PaddedScrollView VerticalOptions="FillAndExpand" Orientation="Vertical">
@@ -32,54 +32,54 @@
                 </controls:PaddedScrollView.Margin>
                 <StackLayout VerticalOptions="StartAndExpand">
                     <StackLayout VerticalOptions="StartAndExpand">
-                        <Label Style="{StaticResource BoldLabel}" Text="Made For You" TextColor="White" HorizontalTextAlignment="Center" FontSize="18" />
+                        <Label Text="Made For You" TextColor="White" HorizontalTextAlignment="Center" FontSize="18" />
                         <Label Margin="40,-5,0,10" Text="Get better recommendations the more you listen." TextColor="#adaeb2" FontSize="13" />
-                        <controls:HorizontalScrollView HeightRequest="200" SelectedCommand="{Binding OpenPlayerCommand}" Orientation="Horizontal"  ItemsSource="{Binding FeedItems}">
+                        <controls:HorizontalScrollView x:Name="scrollview" HeightRequest="200" SelectedCommand= "{Binding LoadItemsCommand}"  Orientation="Horizontal"  ItemsSource="{Binding FeedItems}">
                             <controls:HorizontalScrollView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
                                         <StackLayout Margin="10,0,5,0" WidthRequest="150" HeightRequest="150">
-                                            <Image HorizontalOptions="Start" Source="{Binding AlbumImageUrl}" WidthRequest="150" HeightRequest="150" />
-                                            <Label Style="{StaticResource BoldLabel}" HorizontalTextAlignment="Center" FontSize="13" LineBreakMode="TailTruncation" Text="{Binding Title}" TextColor="White"/>
-                                            <Label HorizontalTextAlignment="Center" Margin="0,-5,0,0" LineBreakMode="TailTruncation" FontSize="12" Text="{Binding Artist}" TextColor="#adaeb2"/>
+                                            <Image HorizontalOptions="Start" Source="{Binding FeaturedImage}" WidthRequest="150" HeightRequest="150" />
+                                            <Label HorizontalTextAlignment="Center" FontSize="13" LineBreakMode="TailTruncation" Text="{Binding Heading}" TextColor="White"/>
+                                            <Label HorizontalTextAlignment="Center" Margin="0,-5,0,0" LineBreakMode="TailTruncation" FontSize="12" Text="{Binding FormattedDate}" TextColor="#adaeb2"/>
                                         </StackLayout>
                                     </ViewCell>
                                 </DataTemplate>
                             </controls:HorizontalScrollView.ItemTemplate>
                         </controls:HorizontalScrollView>
                     </StackLayout>
-                    <StackLayout VerticalOptions="StartAndExpand" Margin="0,30,0,0">
-                        <Label Style="{StaticResource BoldLabel}" Text="Jump Back In" TextColor="White" HorizontalTextAlignment="Center" FontSize="18" />
+                    <!--<StackLayout VerticalOptions="StartAndExpand" Margin="0,30,0,0">
+                        <Label Text="Jump Back In" TextColor="White" HorizontalTextAlignment="Center" FontSize="18" />
                         <controls:HorizontalScrollView HeightRequest="200" Orientation="Horizontal"  ItemsSource="{Binding Albums}">
                             <controls:HorizontalScrollView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
                                         <StackLayout Margin="10,0,5,0" WidthRequest="150" HeightRequest="150">
                                             <Image HorizontalOptions="Start" Source="{Binding ImageUrl}" WidthRequest="150" HeightRequest="150" />
-                                            <Label Style="{StaticResource BoldLabel}" HorizontalTextAlignment="Center" FontSize="13" LineBreakMode="TailTruncation" Text="{Binding Name}" TextColor="White"/>
+                                            <Label HorizontalTextAlignment="Center" FontSize="13" LineBreakMode="TailTruncation" Text="{Binding Name}" TextColor="White"/>
                                             <Label HorizontalTextAlignment="Center" Margin="0,-5,0,0" LineBreakMode="TailTruncation" FontSize="13" Text="{Binding Artist}" TextColor="#adaeb2"/>
                                         </StackLayout>
                                     </ViewCell>
                                 </DataTemplate>
                             </controls:HorizontalScrollView.ItemTemplate>
                         </controls:HorizontalScrollView>
-                    </StackLayout> 
-                    <StackLayout VerticalOptions="StartAndExpand" Margin="0,30,0,0">
-                        <Label Style="{StaticResource BoldLabel}" Text="Recently Played" TextColor="White" HorizontalTextAlignment="Center" FontSize="18" />
+                    </StackLayout>--> 
+                    <!--<StackLayout VerticalOptions="StartAndExpand" Margin="0,30,0,0">
+                        <Label Text="Recently Played" TextColor="White" HorizontalTextAlignment="Center" FontSize="18" />
                         <controls:HorizontalScrollView HeightRequest="200" Orientation="Horizontal"  ItemsSource="{Binding Playlists}">
                             <controls:HorizontalScrollView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
                                         <StackLayout Margin="10,0,5,0" WidthRequest="150" HeightRequest="150">
                                             <Image HorizontalOptions="Start" Source="{Binding ImageUrl}" WidthRequest="150" HeightRequest="150" />
-                                            <Label Style="{StaticResource BoldLabel}" HorizontalTextAlignment="Center" FontSize="13" LineBreakMode="TailTruncation" Text="{Binding Name}" TextColor="White"/>
+                                            <Label HorizontalTextAlignment="Center" FontSize="13" LineBreakMode="TailTruncation" Text="{Binding Name}" TextColor="White"/>
                                             <Label HorizontalTextAlignment="Center" Margin="0,-5,0,0" LineBreakMode="TailTruncation" FontSize="12" Text="{Binding NrOfFollowers, StringFormat='{0:N0} VOLGERS'}" TextColor="#adaeb2"/>
                                         </StackLayout>
                                     </ViewCell>
                                 </DataTemplate>
                             </controls:HorizontalScrollView.ItemTemplate>
                         </controls:HorizontalScrollView>
-                    </StackLayout>
+                    </StackLayout>-->
                 </StackLayout>
             </controls:PaddedScrollView>
             <Grid BackgroundColor="#222326" RowSpacing="0" ColumnSpacing="0" Padding="0" Margin="0">
