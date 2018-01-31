@@ -22623,20 +22623,25 @@
     "UAP,Version=v10.0.10586": []
   },
   "packageFolders": {
-    "C:\\Users\\Nelly\\.nuget\\packages\\": {}
+    "C:\\Users\\Nelly\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\SeDailyXamarin.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\SeDailyXamarin.UWP.csproj",
       "projectName": "SeDailyXamarin.UWP",
-      "projectPath": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\SeDailyXamarin.UWP.csproj",
-      "projectJsonPath": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\project.json",
+      "projectPath": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\SeDailyXamarin.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\project.json",
       "packagesPath": "C:\\Users\\Nelly\\.nuget\\packages\\",
-      "outputPath": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\obj\\",
+      "outputPath": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.UWP\\obj\\",
       "projectStyle": "ProjectJson",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
+      ],
       "configFilePaths": [
         "C:\\Users\\Nelly\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -22645,19 +22650,19 @@
       "frameworks": {
         "uap10.0.10586": {
           "projectReferences": {
-            "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.csproj": {
-              "projectPath": "S:\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.csproj"
+            "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.csproj": {
+              "projectPath": "C:\\Users\\Nelly\\projects\\open-source\\sedaily-xamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin\\SeDailyXamarin.csproj"
             }
           }
         }
       }
     },
     "dependencies": {
-      "FreshMvvm": "2.2.3",
-      "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-      "Plugin.MediaManager": "0.4.5",
-      "Plugin.MediaManager.Forms": "0.4.5",
-      "Xamarin.Forms": "2.4.0.74863"
+      "FreshMvvm": "[2.2.3, )",
+      "Microsoft.NETCore.UniversalWindowsPlatform": "[5.2.2, )",
+      "Plugin.MediaManager": "[0.4.5, )",
+      "Plugin.MediaManager.Forms": "[0.4.5, )",
+      "Xamarin.Forms": "[2.4.0.74863, )"
     },
     "frameworks": {
       "uap10.0.10586": {}
